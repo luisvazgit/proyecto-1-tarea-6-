@@ -1,0 +1,333 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 25px;
+    margin: auto;
+    position: relative;
+}
+
+h1 {
+    margin: 20;
+}
+
+p {
+    padding: 5%;
+}
+
+header {
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0.4px 10px -5px #555;
+}
+
+header a:hover {
+    border: 2px solid rgb(70, 53, 4);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: darkgray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 3%;
+
+
+}
+
+.perfil {
+    border-radius: 60%;
+    width: 250px;
+    height: 250px;
+    padding: 1px;
+    margin: 110px;
+    margin-bottom: 0.6rem;
+    max-width: 350px;
+
+}
+
+
+
+.contacto {
+    align-items: center;
+    justify-content: center;
+}
+
+.boton {
+    background-color: rgb(53, 8, 8);
+    color: white;
+    font-size: 25px;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 20px 20px;
+}
+
+h1 {
+    display: flex;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Para quitar los puntos a los items de listas */
+header ul {
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    margin: 0 15px;
+    padding: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+article {
+    background-color: darkgray;
+    border-bottom: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 12px;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.iconos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5%;
+    margin: 5%;
+}
+
+.ico_imagen {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 3rem;
+
+}
+
+.logo {
+    border-radius: 60%;
+    height: 90px;
+    width: 90px;
+    margin: 0%;
+    justify-content: left;
+}
+
+footer {
+    background-color: brown;
+    padding: 30px;
+    color: black;
+    text-align: center;
+
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    nav {
+        font-size: 18px;
+    }
+
+    .perfil {
+        width: 150px;
+        height: 150px;
+        margin: 50px;
+    }
+
+    .boton {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    h1 {
+        height: 70px;
+    }
+
+    ul li {
+        margin: 0 10px;
+    }
+
+    .ico_imagen {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 22px;
+    }
+
+    nav {
+        font-size: 22px;
+    }
+
+    .perfil {
+        width: 200px;
+        height: 200px;
+        margin: 80px;
+    }
+
+    .boton {
+        font-size: 22px;
+        padding: 10px 18px;
+        margin: 15px 15px;
+    }
+
+    h1 {
+        height: 80px;
+    }
+
+    ul li {
+        margin: 0 15px;
+    }
+
+    .ico_imagen {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 2rem;
+    }
+
+    .logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    footer {
+        padding: 25px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 25px;
+    }
+
+    nav {
+        font-size: 25px;
+    }
+
+    .perfil {
+        width: 250px;
+        height: 250px;
+        margin: 130px;
+    }
+
+    .boton {
+        font-size: 25px;
+        padding: 12px 20px;
+        margin: 20px 20px;
+    }
+
+    h1 {
+        height: 90px;
+    }
+
+    ul li {
+        margin: 0 20px;
+    }
+
+    .ico_imagen {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 3rem;
+    }
+
+    .logo {
+        height: 90px;
+        width: 90px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
